@@ -1,20 +1,20 @@
-import { useState } from 'react'
-import './App.css'
-import {BrowserRouter} from 'react-router-dom'
+import { useState } from "react";
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import About from "./pages/About";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-    <BrowserRouter>
-    
-
-    </BrowserRouter>
-
- 
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<About />} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
