@@ -14,3 +14,35 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+React Start Website 
+
+## Description
+This project is a web application that helps users track their daily task efficiently.
+
+## Installation
+1. Clone the repository: `git clone https://github.com/amarkalel077/project.git`
+2. Navigate to the folder: `cd project`
+3. Install dependencies: `npm install`
+4. Run the project: `npm run dev`
+
+## Usage
+- Open the app in your browser at `http://localhost:5173`
+
+## Technologies
+- React.js
+- Tailwind CSS
+
+## Pages information 
+
+1. Home
+2. About
+3. Projects
+4. Servicess
+5. Contact
+6. Career
+7. Blogs
+
+
+
