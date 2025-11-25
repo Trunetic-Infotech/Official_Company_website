@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../assets/logo10.png"
 
 import {
   Mail,
@@ -16,7 +17,14 @@ const FooterC = () => {
     <footer className="bg-[#0a1a2f] text-white  pt-16 pb-8 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <div>
-          <h2 className="text-xl font-bold tracking-wide">TRUNETIC INFOTECH</h2>
+          <div className="flex items-center gap-2">
+            <img src={logo}
+            className="w-[40px]"/>
+            <h2 className="text-xl font-bold tracking-wide">
+              TRUNETIC INFOTECH
+            </h2>
+          </div>
+
           <p className="mt-4 text-sm text-gray-300 leading-relaxed">
             Trunetic Infotech is a growing company with a vision to become a
             leading provider of web design and software development services.
@@ -27,7 +35,11 @@ const FooterC = () => {
           <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
           <ul className="space-y-2 text-gray-300 text-sm">
             <li>
-              <NavLink to="/" onClick={() => window.scrollTo(0, 0)} className="hover:text-blue-400 transition ">
+              <NavLink
+                to="/"
+                onClick={() => window.scrollTo(0, 0)}
+                className="hover:text-blue-400 transition "
+              >
                 Home
               </NavLink>
             </li>

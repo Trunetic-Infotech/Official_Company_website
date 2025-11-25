@@ -1,9 +1,34 @@
 import { motion } from "framer-motion";
+import {
+  FiHeart,
+  FiCreditCard,
+  FiTruck,
+  FiShoppingCart,
+  FiBook,
+  FiCloud,
+  FiHome,
+  FiShoppingBag,
+  FiAirplay,
+  FiCpu,
+  FiShield,
+  
+} from "react-icons/fi";
+import { IoRocketOutline } from "react-icons/io5";
+
 
 const industries = [
-  "Healthcare", "Fintech", "Logistics", "Retail", "Education",
-  "SaaS", "Real Estate", "Ecommerce", "Travel & Hospitality",
-  "Manufacturing", "Insurance", "Startups"
+  { name: "Healthcare", icon: FiHeart },
+  { name: "Fintech", icon: FiCreditCard },
+  { name: "Logistics", icon: FiTruck },
+  { name: "Retail", icon: FiShoppingCart },
+  { name: "Education", icon: FiBook },
+  { name: "SaaS", icon: FiCloud },
+  { name: "Real Estate", icon: FiHome },
+  { name: "Ecommerce", icon: FiShoppingBag },
+  { name: "Travel & Hospitality", icon: FiAirplay },
+  { name: "Manufacturing", icon: FiCpu },
+  { name: "Insurance", icon: FiShield },
+  { name: "Startups", icon: IoRocketOutline }
 ];
 
 export default function IndustriesC() {
@@ -15,35 +40,37 @@ export default function IndustriesC() {
       </h2>
 
       <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 p-6">
-        
-        {industries.map((item, index) => (
-          <motion.div
-            key={item}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 30 }}
-            viewport={{ once: false, amount: 0.4 }}
-            transition={{ duration: 1.0, delay: index * 0.01 }}
-            whileHover={{
-              scale: 1.00,
-              backgroundColor: "#0F2D4D",
-              boxShadow: "0px 0px 22px #00b7ff",
-              borderColor: "#00b7ff",
-              
-            }}
-            className="border rounded-xl py-4 text-center text-lg font-semibold 
-                       bg-[#0A1A2F] border-blue-400 
-                       transition-all duration-50 cursor-pointer"
-          >
-            <motion.span
-              whileHover={{ 
-                color: "#4fc3ff",  
+
+        {industries.map((item, index) => {
+          const Icon = item.icon;
+
+          return (
+            <motion.div
+              key={item.name}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.4 }}
+              transition={{ duration: 0.8, delay: index * 0.05 }}
+              whileHover={{
+                scale: 1.03,
+                backgroundColor: "#0F2D4D",
+                boxShadow: "0px 0px 18px #0093FF",
+                borderColor: "#0093FF"
               }}
-              className="transition-all duration-50"
+              className="border rounded-xl py-6 text-center font-semibold
+                         bg-[#0A1A2F] border-blue-400 transition-all cursor-pointer"
             >
-              {item}
-            </motion.span>
-          </motion.div>
-        ))}
+              <Icon className="text-3xl mx-auto mb-3 text-blue-300" />
+
+              <motion.span
+                whileHover={{ color: "#4fc3ff" }}
+                className="transition-all text-lg"
+              >
+                {item.name}
+              </motion.span>
+            </motion.div>
+          );
+        })}
 
       </div>
     </section>

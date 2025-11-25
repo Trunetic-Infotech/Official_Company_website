@@ -67,7 +67,9 @@ const Hero = () => {
               />
             </div>
           </div>
+          
         </section>
+        
         {/* NEON SECTION BELOW HERO */}
         <div className="w-full mt-20 bg-[#0a1a2f] text-white px-6 py-24">
           <div

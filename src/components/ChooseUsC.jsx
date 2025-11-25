@@ -50,7 +50,7 @@ const ChooseUsC = () => {
           whileInView="visible"
           custom={0.25}
           viewport={{ once: true }}
-          className="w-16 h-1 bg-blue-500 drop-shadow-[0_0_10px_#3DAAFF] mx-auto mt-2 mb-6 rounded-full"
+          className="w-16 h-1 bg-[#4fc3ff] drop-shadow-[0_0_8px_#3DAAFF] mx-auto mt-2 mb-6 rounded-full"
         />
 
         {/* CARDS */}
@@ -62,7 +62,7 @@ const ChooseUsC = () => {
               initial="hidden"
               whileInView="visible"
               custom={0.3 + i * 0.15}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               <img src={img} className="w-14 mx-auto mb-4" />
               <h3 className="font-bold text-lg">
@@ -94,9 +94,9 @@ const ChooseUsC = () => {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          custom={0.3 + 4 * 0.15}
+          custom={0.3 + 4 * 0.10}
           viewport={{ once: true }}
-          className="w-full py-14 flex flex-col md:flex-row items-center justify-between 
+          className="w-full py-8 flex flex-col md:flex-row items-center justify-between 
             mt-16 max-w-6xl mx-auto px-6 rounded-2xl 
             bg-gradient-to-r from-[#eef6ff] to-white border border-[#d0e4ff]
             shadow-[0_0_20px_rgba(180,200,255,0.4)]"

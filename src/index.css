@@ -11,9 +11,9 @@
   }
 }
 body {
-  background: linear-gradient(135deg, #d8b4fe, #93c5fd);
+  background: linear-gradient(135deg, #d8b4fe,#5cafdf,#ab9deb,#d8b4fe,#c29ac7, #93c5fd);
   min-height: 100vh;
-  padding: 16px; /* creates space so border is visible */
+  padding: 16px; 
 }
 
 

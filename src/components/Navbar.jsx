@@ -39,7 +39,7 @@ function Navbar() {
               className={`px-4 py-2 text-lg rounded-full transition ${
                 current === "/about"
                   ? "bg-black text-white font-semibold"
-                  : "text-gray-700 hover:text-black"
+                  : "text-gray-700 hover:text-black hover:font-bold"
               }`}
             >
               About
@@ -50,7 +50,7 @@ function Navbar() {
               className={`px-4 py-2 text-lg rounded-full transition ${
                 current === "/projects"
                   ? "bg-black text-white font-semibold"
-                  : "text-gray-700 hover:text-black"
+                  : "text-gray-700 hover:text-black hover:font-bold"
               }`}
             >
               Projects
@@ -61,7 +61,7 @@ function Navbar() {
               className={`px-4 py-2 text-lg rounded-full transition ${
                 current === "/services"
                   ? "bg-black text-white font-semibold"
-                  : "text-gray-700 hover:text-black"
+                  : "text-gray-700 hover:text-black hover:font-bold"
               }`}
             >
               Services
@@ -72,7 +72,7 @@ function Navbar() {
               className={`px-4 py-2 text-lg rounded-full transition ${
                 current === "/contact"
                   ? "bg-black text-white font-semibold"
-                  : "text-gray-700 hover:text-black"
+                  : "text-gray-700 hover:text-black hover:font-bold"
               }`}
             >
               Contact

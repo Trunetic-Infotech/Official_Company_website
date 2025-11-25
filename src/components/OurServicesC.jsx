@@ -16,9 +16,10 @@ const HoverCard = ({ img, title, desc }) => {
       className={`
         relative rounded-xl p-8 min-h-[240px] cursor-pointer 
         border transition-all duration-500 overflow-hidden
-        ${hover 
-          ? "bg-[#f5f8fc] border-[#00b7ff] font-semibold  shadow-[0_0_30px_#00b7ff] " 
-          : "bg-[#0b1c31] border-[#004b83] shadow-[0_0_20px_#004b83]"
+        ${
+          hover
+            ? "bg-[#f5f8fc] border-[#00b7ff] font-semibold  shadow-[0_0_30px_#00b7ff]"
+            : "bg-[#0b1c31] border-[#004b83] shadow-[0_0_20px_#004b83]"
         }
       `}
     >
@@ -27,7 +28,7 @@ const HoverCard = ({ img, title, desc }) => {
         src={img}
         alt={title}
         className={`w-14 h-14 mx-auto mb-4 transition-all duration-500
-          ${hover ? "opacity-0 -translate-y-3" : "opacity-100 translate-y-0"}
+          ${hover ? "opacity-100 -translate-y-3" : "opacity-100 translate-y-0"}
         `}
       />
 
@@ -44,10 +45,7 @@ const HoverCard = ({ img, title, desc }) => {
       <p
         className={`text-black text-base text-center leading-relaxed px-2 absolute left-0 right-0 
           transition-all duration-500
-          ${hover 
-            ? "opacity-100 translate-y-0" 
-            : "opacity-0 translate-y-4"
-          }
+          ${hover ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
         `}
         style={{ top: "50%", transform: "translateY(-50%)" }}
       >
@@ -61,7 +59,6 @@ const OurServicesC = () => {
   return (
     <section className="w-full bg-[#0a1a2f] text-white py-20 px-6">
       <div className="max-w-7xl mx-auto text-center">
-
         {/* Heading */}
         <p className="text-2xl text-[#0093FF] font-bold tracking-wide mb-6">
           OUR SERVICES
@@ -75,7 +72,6 @@ const OurServicesC = () => {
 
         {/* Cards */}
         <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
           <HoverCard
             img={service1}
             title="Web Development"
@@ -111,7 +107,6 @@ const OurServicesC = () => {
             title="API Integration"
             desc="Integrating third-party APIs to enhance performance and connectivity."
           />
-
         </div>
       </div>
     </section>
