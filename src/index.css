@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.border-shadow {
+    box-shadow:  
+      -6px 10px 15px rgba(41, 40, 40, 0.4), /* Softer light gray */
+       6px 10px 15px rgba(77, 75, 75, 0.4), 
+       0px 12px 18px rgba(85, 85, 85, 0.4);
+ }
+
+ .border-shadoww {
+    box-shadow:  
+      -6px 10px 15px rgba(5, 61, 165, 0.4), /* Softer light gray */
+       6px 10px 15px rgba(11, 48, 168, 0.4), 
+       0px 12px 18px rgba(6, 69, 185, 0.4);
+ }
 @keyframes slideIn {
   from {
     transform: translateX(100%);

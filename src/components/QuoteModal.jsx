@@ -1,8 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { X } from "lucide-react";
+
 
 function QuoteModal({ isOpen, onClose }) {
   if (!isOpen) return null;
+
+   const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+    formData.append("access_key", "e7edf81c-e665-4657-926d-e9dee9432078");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      setResult("Error");
+    }
+  };
+
+
   return (
     <div className="fixed inset-0 z-50 flex justify-end bg-black/40">
       <div className="w-full max-w-sm h-full bg-white shadow-xl p-6 overflow-y-auto animate-slideIn">
@@ -16,6 +41,7 @@ function QuoteModal({ isOpen, onClose }) {
           </button>
         </div>
         <div className="space-y-4">
+          <form onSubmit={onSubmit}>
           <div>
             <h3 className="font-semibold text-[#1641af]">Get in Touch</h3>
             <p className="text-sm text-gray-600">
@@ -42,7 +68,7 @@ function QuoteModal({ isOpen, onClose }) {
             <div>
               <label className="text-sm font-medium">Phone Number</label>
               <input
-                type="text"
+                type="number"
                 className="w-full border p-2 rounded mt-1"
                 placeholder="Enter Your Phone Number"
               />
@@ -57,9 +83,12 @@ function QuoteModal({ isOpen, onClose }) {
             </div>
           </div>
 
-          <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full">
+          <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full">
             Submit
           </button>
+
+          </form>
+          <span>{result}</span>
         </div>
         <div className="mt-8">
           <div className="mt-4 space-y-4 text-sm">

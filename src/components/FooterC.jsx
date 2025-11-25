@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import logo from "../assets/logo10.png"
 
 import {
@@ -139,6 +141,14 @@ const FooterC = () => {
             </a>
           </div>
         </div>
+        <a
+          href="https://wa.me/9372969593"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-4 right-10 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-500 transition-all"
+        >
+          <FontAwesomeIcon icon={faWhatsapp} className="w-8 h-7" />
+        </a>
       </div>
     </footer>
   );
