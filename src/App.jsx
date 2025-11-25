@@ -1,6 +1,7 @@
-import { useState } from "react";
+
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Services from "./pages/Services";
@@ -15,15 +16,23 @@ import AppDevelopment from "./pages/AppDevelopment";
 import Internship from "./pages/Internship";
 import Crm from "./pages/Crm";
 import Erp from "./pages/Erp";
+import Navbar from "./components/Navbar"
+import FooterC from "./components/FooterC";
+import Login from "./pages/Login";
+
+
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
-    <>
+    <div className="min-h-screen bg-white rounded-3xl shadow-xl overflow-hidden">
       <BrowserRouter>
+        <Navbar/>
         <Routes>
-          <Route path="/" element={<About />} />
+            <Route path="/" element={<Home />} />
+        
+          <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/services" element={<Services />} />
           <Route path="/career" element={<Career />} />
@@ -40,9 +49,12 @@ function App() {
           <Route path="/internship" element={<Internship />} />
           <Route path="/crm" element={<Crm />} />
           <Route path="/erp" element={<Erp />} />
+          <Route path="/login" element={< Login/>} />
+          
         </Routes>
+        <FooterC/>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

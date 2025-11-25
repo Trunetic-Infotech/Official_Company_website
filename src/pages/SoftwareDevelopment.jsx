@@ -1,5 +1,6 @@
 import React from "react";
 import Web from "../assets/ServicessType/web.png"; // Import your software image
+import { Helmet } from "react-helmet";
 
 function SoftwareDevelopment() {
   const advantages = [
@@ -12,6 +13,13 @@ function SoftwareDevelopment() {
   ];
 
   return (
+
+     <>
+    <Helmet>
+      <title>
+        Software Development
+      </title>
+    </Helmet>
     <div className="w-full px-4 md:px-16 py-16 bg-gray-50">
       {/* Page Title */}
       <h1 className="text-center font-bold text-blue-700 text-4xl md:text-5xl mb-14">
@@ -73,6 +81,8 @@ function SoftwareDevelopment() {
         </div>
       </div>
     </div>
+
+    </>
   );
 }
 

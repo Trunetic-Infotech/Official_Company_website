@@ -1,5 +1,6 @@
 import React from "react";
 import web from "../assets/ServicessType/web.png";
+import { Helmet } from "react-helmet";
 
 function WebDevelopment() {
   const advantages = [
@@ -12,6 +13,13 @@ function WebDevelopment() {
   ];
 
   return (
+
+     <>
+    <Helmet>
+      <title>
+        Web Development
+      </title>
+    </Helmet>
     <div className="w-full px-4 md:px-16 py-16 bg-gray-50">
       {/* Page Title */}
       <h1 className="text-center font-bold text-blue-700 text-4xl md:text-5xl mb-14">
@@ -79,6 +87,7 @@ function WebDevelopment() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

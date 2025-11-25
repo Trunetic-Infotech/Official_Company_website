@@ -1,5 +1,6 @@
 import React from "react";
 import erpImg from "../assets/ServicessType/web.png"; // Replace with your ERP image
+import { Helmet } from "react-helmet";
 
 function Erp() {
   const advantages = [
@@ -12,6 +13,12 @@ function Erp() {
   ];
 
   return (
+     <>
+    <Helmet>
+      <title>
+        ERP Software 
+      </title>
+    </Helmet>
     <div className="w-full px-4 md:px-16 py-16 bg-gray-50">
       {/* Page Title */}
       <h1 className="text-center font-bold text-blue-700 text-4xl md:text-5xl mb-14">
@@ -74,6 +81,7 @@ function Erp() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

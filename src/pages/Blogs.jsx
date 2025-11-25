@@ -12,6 +12,7 @@ import img8 from "../assets/Blogs/team.jpg";
 import banner from "../assets/bannerblogs.png";
 
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const blogData = [
   {
@@ -91,6 +92,11 @@ const blogData = [
 export default function Blogs() {
   return (
     <>
+    <Helmet>
+      <title>
+        Blogs
+      </title>
+    </Helmet>
       {/* <Helmet>
         <title>Blogs-Trunetic Infotech</title>
       </Helmet> */}
@@ -126,7 +132,7 @@ export default function Blogs() {
         </div>
 
         <div className="flex justify-center items-center flex-col text-center">
-          <h2 className="text-blue-800 text-4xl text-shadow font-bold mt-[5%]">
+          <h2 className="text-blue-800 text-4xl text-shadow font-bold mt-[12%] md:mt-[7%] lg:mt-[7%] sm:mt-[10%]">
             OUR LATEST BLOGS
           </h2>
         </div>
