@@ -1,6 +1,7 @@
-
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+// Public Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
@@ -16,22 +17,28 @@ import AppDevelopment from "./pages/AppDevelopment";
 import Internship from "./pages/Internship";
 import Crm from "./pages/Crm";
 import Erp from "./pages/Erp";
-import Navbar from "./components/Navbar"
-import FooterC from "./components/FooterC";
 import Login from "./pages/Login";
 
+// Components
+import Navbar from "./components/Navbar";
+import FooterC from "./components/FooterC";
 
+// Admin Dashboard
+
+import AdminRoutes from "./Routes/AdminRoutes";
 
 function App() {
-  // const [count, setCount] = useState(0);
+  const isAdminRoute = window.location.pathname.startsWith("/admin");
 
   return (
     <div className="min-h-screen bg-white rounded-3xl shadow-xl overflow-hidden">
       <BrowserRouter>
-        <Navbar/>
+        {/* Hide Navbar on admin routes */}
+        {!isAdminRoute && <Navbar />}
+
         <Routes>
-            <Route path="/" element={<Home />} />
-        
+          {/* Public Routes */}
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/services" element={<Services />} />
@@ -49,10 +56,15 @@ function App() {
           <Route path="/internship" element={<Internship />} />
           <Route path="/crm" element={<Crm />} />
           <Route path="/erp" element={<Erp />} />
-          <Route path="/login" element={< Login/>} />
-          
+          <Route path="/login" element={<Login />} />
+
+          {/* Admin Routes */}
+          <Route path="/admin/*" element={<AdminRoutes />} />
+
         </Routes>
-        <FooterC/>
+
+        {/* Hide Footer on admin routes */}
+        {!isAdminRoute && <FooterC />}
       </BrowserRouter>
     </div>
   );
