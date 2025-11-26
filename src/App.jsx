@@ -1,6 +1,6 @@
+import { Routes, Route, useLocation } from "react-router-dom";
 
-import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+// Public Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
@@ -16,46 +16,47 @@ import AppDevelopment from "./pages/AppDevelopment";
 import Internship from "./pages/Internship";
 import Crm from "./pages/Crm";
 import Erp from "./pages/Erp";
-import Navbar from "./components/Navbar"
-import FooterC from "./components/FooterC";
 import Login from "./pages/Login";
 
+import Navbar from "./components/Navbar";
+import FooterC from "./components/FooterC";
 
+import AdminRoutes from "./Routes/AdminRoutes";
 
-function App() {
-  // const [count, setCount] = useState(0);
+export default function AppContent() {
+  const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith("/admin");
 
   return (
-    <div className="min-h-screen bg-white rounded-3xl shadow-xl overflow-hidden">
-      <BrowserRouter>
-        <Navbar/>
-        <Routes>
-            <Route path="/" element={<Home />} />
-        
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/career" element={<Career />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/careerform" element={<CareerForm />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/certifications" element={<Certifications />} />
-          <Route path="/webdevelopment" element={<WebDevelopment />} />
-          <Route
-            path="/softwaredevelopment"
-            element={<SoftwareDevelopment />}
-          />
-          <Route path="/appdevelopment" element={<AppDevelopment />} />
-          <Route path="/internship" element={<Internship />} />
-          <Route path="/crm" element={<Crm />} />
-          <Route path="/erp" element={<Erp />} />
-          <Route path="/login" element={< Login/>} />
-          
-        </Routes>
-        <FooterC/>
-      </BrowserRouter>
+    <div className="min-h-screen bg-white rounded-3xl shadow-xl overflow-auto">
+      {/* Hide Navbar on admin pages */}
+      {!isAdminRoute && <Navbar />}
+
+      <Routes>
+        {/* Public Routes */}
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/career" element={<Career />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/careerform" element={<CareerForm />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/certifications" element={<Certifications />} />
+        <Route path="/webdevelopment" element={<WebDevelopment />} />
+        <Route path="/softwaredevelopment" element={<SoftwareDevelopment />} />
+        <Route path="/appdevelopment" element={<AppDevelopment />} />
+        <Route path="/internship" element={<Internship />} />
+        <Route path="/crm" element={<Crm />} />
+        <Route path="/erp" element={<Erp />} />
+        <Route path="/login" element={<Login />} />
+
+        {/* Admin Routes */}
+        <Route path="/admin/*" element={<AdminRoutes />} />
+      </Routes>
+
+      {/* Hide Footer on admin pages */}
+      {!isAdminRoute && <FooterC />}
     </div>
   );
 }
-
-export default App;

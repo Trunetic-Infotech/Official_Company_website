@@ -2,7 +2,7 @@ import React from "react";
 
 const AdminHome = () => {
   return (
-    <div className="w-full min-h-screen bg-gray-100 p-6">
+    <div className="w-full h-[100vh] bg-gray-100 p-6">
       <h1 className="text-3xl font-semibold">Admin Dashboard</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
