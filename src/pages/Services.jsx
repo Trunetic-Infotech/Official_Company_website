@@ -57,12 +57,11 @@ const Services = () => {
       </Helmet>
 
       <div className="bg-[#f7f9fc] min-h-screen pb-12">
-
         {/* ================= Banner ================= */}
         <motion.div
           initial={{ opacity: 0, y: -40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="relative w-full h-[50vh] rounded-xl overflow-hidden"
         >
           <img
@@ -84,9 +83,9 @@ const Services = () => {
 
         {/* ================= Section Title ================= */}
         <motion.h1
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
           className="text-center mt-12 text-4xl font-extrabold text-gray-800"
         >
           Our <span className="text-blue-600">Services</span>
@@ -100,8 +99,8 @@ const Services = () => {
             <Link to={service.link} key={index}>
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.7 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
                 className="bg-white border border-gray-200 rounded-2xl shadow-md p-6
                 flex flex-col items-center text-center gap-4 hover:-translate-y-2
                 hover:shadow-2xl hover:border-blue-500 transition-all duration-300"
@@ -125,7 +124,6 @@ const Services = () => {
             </Link>
           ))}
         </div>
-
       </div>
     </>
   );

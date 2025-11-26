@@ -20,12 +20,11 @@ const Projects = () => {
       </Helmet>
 
       <div className="bg-[#f7f9fc] min-h-screen">
-
         {/* ================= Banner Section ================= */}
         <motion.div
           initial={{ opacity: 0, y: -40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="relative w-full h-[50vh] overflow-hidden rounded-xl"
         >
           <img
@@ -43,9 +42,9 @@ const Projects = () => {
 
         {/* ================= Section Title ================= */}
         <motion.h1
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
           className="text-center mt-12 text-4xl font-extrabold text-gray-800"
         >
           Explore Our <span className="text-blue-600">Latest Projects</span>
@@ -64,8 +63,8 @@ const Projects = () => {
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.7 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7 }}
                   className="rounded-xl overflow-hidden shadow-md bg-white 
                   hover:shadow-2xl border border-gray-200 transition-all duration-300 
                   hover:-translate-y-2 hover:border-blue-500"

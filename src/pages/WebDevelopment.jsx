@@ -4,89 +4,103 @@ import { Helmet } from "react-helmet";
 
 function WebDevelopment() {
   const advantages = [
-    "Responsive & Mobile-Friendly Websites",
-    "High-Performance & Fast Loading Speed",
-    "SEO-Optimized Web Architecture",
-    "Secure & Scalable Development",
-    "User-Friendly & Clean UI/UX Designs",
-    "Custom Features According to Business Needs",
+    {
+      title: "Tailored Software Built for Your Business",
+      desc: "We develop custom solutions designed around your exact workflow, ensuring smoother operations and higher productivity.",
+    },
+    {
+      title: "High-Performance & Scalable Architecture",
+      desc: "Our applications are engineered to handle increasing users, data, and features without slowing down.",
+    },
+    {
+      title: "Faster Development with Modern Technologies",
+      desc: "We use the latest frameworks and tools to deliver reliable software quickly without compromising quality.",
+    },
+    {
+      title: "Secure Systems with Strong Data Protection",
+      desc: "Your software is protected with advanced security practices, ensuring safe access and encrypted data storage.",
+    },
+    {
+      title: "Clean, Modern & User-Focused Interface",
+      desc: "We create visually appealing and easy-to-use designs that help users complete tasks faster and with fewer errors.",
+    },
+    {
+      title: "Long-Term Maintenance & Version Upgrades",
+      desc: "We support your software even after deployment with regular updates, feature enhancements, and performance improvements.",
+    },
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>Web Development</title>
+      </Helmet>
 
-     <>
-    <Helmet>
-      <title>
-        Web Development
-      </title>
-    </Helmet>
-    <div className="w-full px-4 md:px-16 py-16 bg-gray-50">
-      {/* Page Title */}
-      <h1 className="text-center font-bold text-blue-700 text-4xl md:text-5xl mb-14">
-        Web Development
-      </h1>
+      <div className="w-full px-4 md:px-16 py-16 bg-gray-50">
+        {/* Page Title */}
+        <h1 className="text-center font-bold text-blue-700 text-4xl md:text-5xl mb-14">
+          Web Development
+        </h1>
 
-      {/* Main Section */}
-      <div className="flex flex-col md:flex-row items-center gap-12 mb-16">
-        {/* Image Section */}
-        <div className="w-full md:w-1/2 flex justify-center">
-          <img
-            src={web}
-            alt="Web Development"
-            className="rounded-2xl shadow-xl w-full max-w-[550px] object-cover border border-gray-200"
-          />
+        {/* Main Section */}
+        <div className="flex flex-col md:flex-row items-center gap-12 mb-16">
+          {/* Image Section */}
+          <div className="w-full md:w-1/2 flex justify-center">
+            <img
+              src={web}
+              alt="Web Development"
+              className="rounded-2xl shadow-xl w-full max-w-[550px] object-cover border border-gray-200"
+            />
+          </div>
+
+          {/* Text Section */}
+          <div className="w-full md:w-1/2 text-gray-700 leading-relaxed text-lg">
+            <h2 className="font-semibold text-3xl text-blue-600 mb-5">
+              Empowering Businesses with Modern Web Solutions
+            </h2>
+
+            <p className="mb-4">
+              At{" "}
+              <span className="font-semibold">
+                Trunetic Infotech Software Solutions
+              </span>
+              , we believe in the power of technology to drive growth and
+              success. We stay updated with the latest trends in web
+              development, digital marketing, and modern UI/UX practices.
+            </p>
+
+            <p>
+              Every business is unique — that’s why we focus on creating{" "}
+              <span className="font-semibold">
+                high-impact, tailor-made web solutions
+              </span>{" "}
+              to help our clients grow faster and stay ahead in the digital
+              world.
+            </p>
+          </div>
         </div>
 
-        {/* Text Section */}
-        <div className="w-full md:w-1/2 text-gray-700 leading-relaxed text-lg">
-          <h2 className="font-semibold text-3xl text-blue-600 mb-5">
-            Empowering Businesses with Modern Web Solutions
+        {/* Advantages Section */}
+        <div className="w-full bg-white rounded-2xl shadow-xl p-10 md:p-14">
+          <h2 className="text-center text-3xl md:text-4xl font-bold text-blue-700 mb-10">
+            Advantages of Our Web Development Services
           </h2>
 
-          <p className="mb-4">
-            At{" "}
-            <span className="font-semibold">
-              Trunetic Infotech Software Solutions
-            </span>
-            , we believe in the power of technology to drive growth and success.
-            We stay updated with the latest trends in web development, digital
-            marketing, and modern UI/UX practices.
-          </p>
-
-          <p>
-            Every business is unique — that’s why we focus on creating{" "}
-            <span className="font-semibold">
-              high-impact, tailor-made web solutions
-            </span>{" "}
-            to help our clients grow faster and stay ahead in the digital world.
-          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {advantages.map((item, index) => (
+              <div
+                key={index}
+                className="bg-blue-50 hover:bg-blue-100 transition-all p-6 rounded-xl shadow-md border border-blue-200"
+              >
+                <h3 className="text-lg font-semibold text-blue-700 mb-2">
+                  ✓ {item.title}
+                </h3>
+                <p className="text-gray-600">{item.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-
-      {/* Advantages Section */}
-      <div className="w-full bg-white rounded-2xl shadow-xl p-10 md:p-14">
-        <h2 className="text-center text-3xl md:text-4xl font-bold text-blue-700 mb-10">
-          Advantages of Our Web Development Services
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {advantages.map((item, index) => (
-            <div
-              key={index}
-              className="bg-blue-50 hover:bg-blue-100 transition-all p-6 rounded-xl shadow-md border border-blue-200"
-            >
-              <h3 className="text-lg font-semibold text-blue-700 mb-2">
-                ✓ {item}
-              </h3>
-              <p className="text-gray-600">
-                We ensure the highest quality standards to deliver outstanding
-                results for our clients across industries.
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
     </>
   );
 }

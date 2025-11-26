@@ -35,9 +35,9 @@ function About() {
 
             {/* Text Section Animation */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
               className="w-full sm:w-1/2 bg-white/70 p-6 sm:p-8 lg:p-10 rounded-xl shadow-lg flex flex-col justify-center mx-auto"
             >
               <h1 className="text-2xl sm:text-xl md:text-xl lg:text-3xl font-bold text-[#1b3b8f] leading-snug text-center sm:text-left">
@@ -59,9 +59,9 @@ function About() {
 
             {/* Right Image Animation */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
               className="sm:w-1/2 flex justify-center items-center"
             >
               <img
@@ -78,8 +78,8 @@ function About() {
           {/* Heading Text Animation */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
             className="w-[70%] flex flex-col mx-auto justify-center"
           >
             <h2 className="text-3xl font-bold text-center text-[#1b3b8f]">
@@ -101,9 +101,9 @@ function About() {
 
           {/* Main Image Animation */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
             className="relative flex justify-center items-center mt-[5%]"
           >
             <img
@@ -121,8 +121,8 @@ function About() {
               {/* Mission Box Animation */}
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
                 className="flex-1 p-6 sm:p-8 bg-[#111827] text-white rounded-lg shadow-xl 
                 flex flex-col items-center text-center"
               >
@@ -135,8 +135,8 @@ function About() {
               {/* Vision Box Animation */}
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
                 className="flex-1 p-6 sm:p-8 bg-[#111827] text-white rounded-lg shadow-xl 
                 flex flex-col items-center text-center"
               >

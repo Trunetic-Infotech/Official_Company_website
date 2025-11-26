@@ -1,5 +1,5 @@
 import React from "react";
-import crmImg from "../assets/ServicessType/web.png"; // Replace with your CRM image
+import crmImg from "../assets/ServicessType/crm.png";
 import { Helmet } from "react-helmet";
 
 function Crm() {
@@ -17,6 +17,7 @@ function Crm() {
       <Helmet>
         <title> CRM Software </title>
       </Helmet>
+
       <div className="w-full px-4 md:px-16 py-16 bg-gray-50">
         {/* Page Title */}
         <h1 className="text-center font-bold text-blue-700 text-4xl md:text-5xl mb-14">
@@ -42,20 +43,16 @@ function Crm() {
 
             <p className="mb-4">
               At{" "}
-              <span className="font-semibold">
-                Trunetic Infotech Software Solutions
-              </span>
-              , we provide CRM software solutions that help businesses manage
+              <span className="font-semibold">Trunetic Infotech Software Solutions</span>,
+              we provide CRM software solutions that help businesses manage
               customer relationships effectively, improve sales efficiency, and
               increase customer satisfaction.
             </p>
 
             <p>
               Our CRM solutions are{" "}
-              <span className="font-semibold">
-                customizable, scalable, and secure
-              </span>
-              , enabling businesses to automate workflows, track leads, and
+              <span className="font-semibold">customizable, scalable, and secure</span>,
+              enabling businesses to automate workflows, track leads, and
               analyze customer data in real time.
             </p>
           </div>
@@ -68,20 +65,67 @@ function Crm() {
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {advantages.map((item, index) => (
-              <div
-                key={index}
-                className="bg-blue-50 hover:bg-blue-100 transition-all p-6 rounded-xl shadow-md border border-blue-200"
-              >
-                <h3 className="text-lg font-semibold text-blue-700 mb-2">
-                  ✓ {item}
-                </h3>
-                <p className="text-gray-600">
-                  Our CRM solutions are designed to simplify operations, improve
-                  customer interactions, and drive business growth.
-                </p>
-              </div>
-            ))}
+
+            {/* 1 */}
+            <div className="bg-blue-50 hover:bg-blue-100 transition-all p-6 rounded-xl shadow-md border border-blue-200">
+              <h3 className="text-lg font-semibold text-blue-700 mb-2">
+                ✓ {advantages[0]}
+              </h3>
+              <p className="text-gray-600">
+                All customer information is stored securely in one place, making it easier to manage relationships efficiently.
+              </p>
+            </div>
+
+            {/* 2 */}
+            <div className="bg-blue-50 hover:bg-blue-100 transition-all p-6 rounded-xl shadow-md border border-blue-200">
+              <h3 className="text-lg font-semibold text-blue-700 mb-2">
+                ✓ {advantages[1]}
+              </h3>
+              <p className="text-gray-600">
+                Automated sales workflows and marketing campaigns help your team save time and increase productivity.
+              </p>
+            </div>
+
+            {/* 3 */}
+            <div className="bg-blue-50 hover:bg-blue-100 transition-all p-6 rounded-xl shadow-md border border-blue-200">
+              <h3 className="text-lg font-semibold text-blue-700 mb-2">
+                ✓ {advantages[2]}
+              </h3>
+              <p className="text-gray-600">
+                Engage customers more effectively and build long-term relationships that improve loyalty and retention.
+              </p>
+            </div>
+
+            {/* 4 */}
+            <div className="bg-blue-50 hover:bg-blue-100 transition-all p-6 rounded-xl shadow-md border border-blue-200">
+              <h3 className="text-lg font-semibold text-blue-700 mb-2">
+                ✓ {advantages[3]}
+              </h3>
+              <p className="text-gray-600">
+                Get real-time insights into sales, leads, and customer activity to make informed business decisions.
+              </p>
+            </div>
+
+            {/* 5 */}
+            <div className="bg-blue-50 hover:bg-blue-100 transition-all p-6 rounded-xl shadow-md border border-blue-200">
+              <h3 className="text-lg font-semibold text-blue-700 mb-2">
+                ✓ {advantages[4]}
+              </h3>
+              <p className="text-gray-600">
+                Our CRM system adapts to your business needs with flexible modules and customizable workflows.
+              </p>
+            </div>
+
+            {/* 6 */}
+            <div className="bg-blue-50 hover:bg-blue-100 transition-all p-6 rounded-xl shadow-md border border-blue-200">
+              <h3 className="text-lg font-semibold text-blue-700 mb-2">
+                ✓ {advantages[5]}
+              </h3>
+              <p className="text-gray-600">
+                Easily connect your CRM with third-party applications to enhance operations and automate tasks.
+              </p>
+            </div>
+
           </div>
         </div>
       </div>

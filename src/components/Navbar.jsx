@@ -15,7 +15,6 @@ function Navbar() {
   const navigate = useNavigate();
 
   return (
-
     <>
       <nav className="   w-full z-50 ">
         <div className="max-w-8xl flex justify-between mx-auto px-6 py-4">
@@ -31,7 +30,7 @@ function Navbar() {
               className={`px-4 py-2 text-lg rounded-full transition ${
                 current === "/"
                   ? "bg-black text-white font-semibold"
-                  : "text-gray-700  hover:text-black hover:font-bold"
+                  : "text-gray-700 hover:text-black  hover:font-bold"
               }`}
             >
               Home
@@ -118,11 +117,13 @@ function Navbar() {
               onClick={() => setModalOpen(true)}
               className="border border-[#03467e] text-[#03467e] px-4 py-2 rounded-md text-md font-bold hover:bg-[#03467e] hover:text-white transition"
             >
-              Get Started
+              Request a Quote
             </button>
 
-            <button onClick={() => navigate("/login")} className="px-4 py-2 border  bg-black text-white rounded-lg text-bold">
-              
+            <button
+              onClick={() => navigate("/login")}
+              className="px-4 py-2 border  bg-black text-white rounded-lg text-bold hover:font-bold"
+            >
               Login
             </button>
           </div>
@@ -234,7 +235,14 @@ function Navbar() {
               onClick={() => setModalOpen(true)}
               className="bg-white border border-[#03467e] text-[#03467e] px-4 py-2 rounded-md text-md font-bold hover:bg-[#03467e] hover:text-white transition"
             >
-              Get Started
+              Request a Quote
+            </button>
+
+            <button
+              onClick={() => navigate("/login")}
+              className="px-4 mx-2 py-2 border  bg-black text-white rounded-lg text-bold hover:font-bold"
+            >
+              Login
             </button>
           </div>
         )}
