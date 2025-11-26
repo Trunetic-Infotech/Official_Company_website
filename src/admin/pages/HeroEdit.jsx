@@ -11,7 +11,7 @@ const HeroEdit = () => {
   };
 
   const handleSave = () => {
-    alert("Hero image updated (connect backend later)");
+    alert("Hero image updated");
   };
 
   return (

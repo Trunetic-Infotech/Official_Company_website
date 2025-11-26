@@ -4,7 +4,7 @@ const AdminLayout = ({ children }) => {
   return (
     <div className="flex">
       {/* Sidebar */}
-      <div className="w-64 h-screen bg-black text-white p-6 fixed">
+      <div className="w-64 h-screen rounded-lg bg-black text-white p-6 fixed overflow-y-auto">
         <h2 className="text-2xl font-bold mb-8">Admin</h2>
 
         <ul className="space-y-4">
