@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -17,6 +18,8 @@ const cardAnim = {
 };
 
 function Career() {
+
+  const navigate = useNavigate ();
   return (
     <>
       <Helmet>
@@ -66,7 +69,7 @@ function Career() {
               <h1 className="text-white font-bold text-xl text-center">
                 FullStack Developer
               </h1>
-              <button className="bg-white px-3 py-2 rounded-lg text-lg font-semibold hover:bg-gray-200">
+              <button onClick={() => navigate("/careerform")} className="bg-white px-3 py-2 rounded-lg text-lg font-semibold hover:bg-gray-200">
                 Apply Now
               </button>
             </motion.div>
@@ -87,7 +90,7 @@ function Career() {
               <h1 className="text-white font-bold text-xl text-center">
                 FullStack Developer
               </h1>
-              <button className="bg-white px-3 py-2 rounded-lg text-lg font-semibold hover:bg-gray-200">
+              <button onClick={() => navigate("/careerform")} className="bg-white px-3 py-2 rounded-lg text-lg font-semibold hover:bg-gray-200">
                 Apply Now
               </button>
             </motion.div>
@@ -108,7 +111,7 @@ function Career() {
               <h1 className="text-white font-bold text-xl text-center">
                 FullStack Developer
               </h1>
-              <button className="bg-white px-3 py-2 rounded-lg text-lg font-semibold hover:bg-gray-200">
+              <button onClick={() => navigate("/careerform")} className="bg-white px-3 py-2 rounded-lg text-lg font-semibold hover:bg-gray-200">
                 Apply Now
               </button>
             </motion.div>

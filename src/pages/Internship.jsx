@@ -1,5 +1,5 @@
 import React from "react";
-import internshipImg from "../assets/ServicessType/web.png"; // Replace with your image
+import internshipImg from "../assets/ServicessType/internship.jpg";
 import { Helmet } from "react-helmet";
 
 function Internship() {
@@ -11,19 +11,38 @@ function Internship() {
   ];
 
   const benefits = [
-    "Hands-on experience with real projects",
-    "Mentorship from industry experts",
-    "Learn latest technologies and frameworks",
-    "Opportunity to work in a professional team",
-    "Certificate and recommendation letter",
-    "Skill development for career growth",
+    {
+      title: "Hands-on experience with real projects",
+      desc: "Work on practical, real-world projects to build strong technical confidence.",
+    },
+    {
+      title: "Mentorship from industry experts",
+      desc: "Learn directly from experienced professionals guiding you at every step.",
+    },
+    {
+      title: "Learn latest technologies and frameworks",
+      desc: "Upgrade your skillset with modern tools used in real software companies.",
+    },
+    {
+      title: "Opportunity to work in a professional team",
+      desc: "Understand teamwork, workflows, and collaborative development practices.",
+    },
+    {
+      title: "Certificate and recommendation letter",
+      desc: "Receive official recognition for completing the internship successfully.",
+    },
+    {
+      title: "Skill development for career growth",
+      desc: "Develop technical and soft skills required to crack interviews and jobs.",
+    },
   ];
 
   return (
     <>
       <Helmet>
-        <title>Software Development</title>
+        <title> Internship Opportunities </title>
       </Helmet>
+
       <div className="w-full px-4 md:px-16 py-16 bg-gray-50">
         {/* Page Title */}
         <h1 className="text-center font-bold text-blue-700 text-4xl md:text-5xl mb-14">
@@ -48,19 +67,19 @@ function Internship() {
             </h2>
 
             <p className="mb-4">
-              Our internship program offers students and freshers the
-              opportunity to gain practical experience in different domains of
-              software development. We provide a structured learning path with
-              real projects in App, Backend, Web, and Software Development.
+              Our internship program helps students and freshers gain{" "}
+              <span className="font-semibold">real-world experience</span> in
+              software development. We offer hands-on training in App
+              Development, Backend Development, Web Development, and Software
+              Engineering.
             </p>
 
             <p>
-              Interns will work closely with our professionals and gain valuable
-              skills, mentorship, and exposure to industry standards.
+              You will work closely with our professional team and learn{" "}
               <span className="font-semibold">
-                {" "}
-                Join us and kickstart your career!
+                industry-level skills, tools, and workflows
               </span>
+              , helping you become job-ready and confident.
             </p>
           </div>
         </div>
@@ -77,7 +96,7 @@ function Internship() {
                 key={index}
                 className="bg-blue-50 hover:bg-blue-100 transition-all p-6 rounded-xl shadow-md border border-blue-200 text-center"
               >
-                <h3 className="text-lg font-semibold text-blue-700 mb-2">
+                <h3 className="text-lg font-semibold text-blue-700">
                   ✓ {item}
                 </h3>
               </div>
@@ -98,12 +117,9 @@ function Internship() {
                 className="bg-blue-50 hover:bg-blue-100 transition-all p-6 rounded-xl shadow-md border border-blue-200"
               >
                 <h3 className="text-lg font-semibold text-blue-700 mb-2">
-                  ✓ {item}
+                  ✓ {item.title}
                 </h3>
-                <p className="text-gray-600">
-                  Gain practical knowledge and industry experience while working
-                  on live projects.
-                </p>
+                <p className="text-gray-600">{item.desc}</p>
               </div>
             ))}
           </div>

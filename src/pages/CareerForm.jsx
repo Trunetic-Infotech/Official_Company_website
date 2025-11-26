@@ -4,7 +4,7 @@ function CareerForm() {
   return (
     <div>
       <div className="flex justify-center items-center p-6 ">
-        <form className="bg-white shadow-xl border-[3px] border-shadow border-[#111827] rounded-xl p-6 w-[80vw] sm:w-[70vw] md:w-[30vw] flex flex-col gap-6">
+        <form className="bg-white shadow-xl border-[3px]  border-[#111827] rounded-xl p-6 w-[80vw] sm:w-[70vw] md:w-[30vw] flex flex-col gap-6">
           <h2 className="text-3xl font-bold text-center ">
             Job Application Form
           </h2>
