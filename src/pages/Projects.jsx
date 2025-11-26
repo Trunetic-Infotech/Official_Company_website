@@ -9,111 +9,88 @@ import project6 from "../assets/ProjectsImg/project6.png";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 
-function Projects() {
+const Projects = () => {
+  const projectsRow1 = [project1, project2, project3, project4];
+  const projectsRow2 = [project5, project6, project1, project2];
+
   return (
     <>
       <Helmet>
         <title>Projects</title>
       </Helmet>
 
-      <div>
-        {/* ===== Banner Section ===== */}
+      <div className="bg-[#f7f9fc] min-h-screen">
+
+        {/* ================= Banner Section ================= */}
         <motion.div
           initial={{ opacity: 0, y: -40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="relative w-full h-[50vh] p-10"
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+          className="relative w-full h-[50vh] overflow-hidden rounded-xl"
         >
           <img
             src={bannerimage}
-            style={{ filter: "blur(3px)" }}
             alt="banner"
-            className="w-full h-full object-cover rounded-xl"
+            className="w-full h-full object-cover"
           />
 
-          <p className="absolute inset-0 text-white flex items-center justify-center text-2xl sm:text-4xl font-bold">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/20" />
+
+          <p className="absolute inset-0 text-white flex items-center justify-center text-3xl sm:text-5xl font-extrabold tracking-wide drop-shadow-xl">
             Our Completed Projects
           </p>
         </motion.div>
 
-        {/* ===== Section Title ===== */}
+        {/* ================= Section Title ================= */}
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center text-4xl font-bold text-white bg-black max-w-lg p-2 rounded-lg mx-10"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mt-12 text-4xl font-extrabold text-gray-800"
         >
-          Explore Our Latest Projects
+          Explore Our <span className="text-blue-600">Latest Projects</span>
         </motion.h1>
 
-        {/* ===== First Row of Projects ===== */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          variants={{
-            visible: {
-              transition: { staggerChildren: 0.2 },
-            },
-          }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 p-5"
-        >
-          {[project1, project2, project3, project4].map((img, index) => (
-            <motion.div
-              key={index}
-              variants={{
-                hidden: { opacity: 0, y: 40 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.8 }}
-              className="p-5 border-shadow bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
-            >
-              <img
-                src={img}
-                alt="project"
-                className="w-full h-48 object-cover rounded-lg"
-              />
-              <h1 className="text-center font-bold text-blue-700 text-xl mt-3">
-                Software Development
-              </h1>
-            </motion.div>
-          ))}
-        </motion.div>
+        <div className="w-28 h-1 mx-auto mt-2 bg-blue-600 rounded-full" />
 
-        {/* ===== Second Row of Projects ===== */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          variants={{
-            visible: {
-              transition: { staggerChildren: 0.2 },
-            },
-          }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 p-5"
-        >
-          {[project5, project6, project1, project2].map((img, index) => (
-            <motion.div
-              key={index}
-              variants={{
-                hidden: { opacity: 0, y: 40 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.8 }}
-              className="p-5 border-shadow bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+        {/* ================= Project Grids ================= */}
+        <div className="px-6 py-10">
+          {[projectsRow1, projectsRow2].map((row, rowIndex) => (
+            <div
+              key={rowIndex}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10"
             >
-              <img
-                src={img}
-                alt="project"
-                className="w-full h-48 object-cover rounded-lg"
-              />
-              <h1 className="text-center font-bold text-blue-700 text-xl mt-3">
-                Software Development
-              </h1>
-            </motion.div>
+              {row.map((img, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7 }}
+                  className="rounded-xl overflow-hidden shadow-md bg-white 
+                  hover:shadow-2xl border border-gray-200 transition-all duration-300 
+                  hover:-translate-y-2 hover:border-blue-500"
+                >
+                  <img
+                    src={img}
+                    alt="project"
+                    className="w-full h-52 object-cover"
+                  />
+
+                  <div className="p-5">
+                    <h1 className="text-center font-semibold text-xl text-gray-800">
+                      Software Development
+                    </h1>
+
+                    <div className="w-12 h-1 bg-blue-600 mx-auto mt-2 rounded-full" />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </>
   );
-}
+};
 
 export default Projects;

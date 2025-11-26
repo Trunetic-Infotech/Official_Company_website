@@ -145,7 +145,7 @@ const FooterC = () => {
           href="https://wa.me/9372969593"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-4 right-10 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-500 transition-all"
+          className="fixed bottom-4 right-10 md:bottom-28 lg:bottom-6 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-500 transition-all"
         >
           <FontAwesomeIcon icon={faWhatsapp} className="w-8 h-7" />
         </a>

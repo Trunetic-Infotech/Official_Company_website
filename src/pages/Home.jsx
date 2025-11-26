@@ -20,7 +20,7 @@ function Home() {
      <IndustriesC/>
      <TechnologiesC/>
      <TestimonialsC/>
-     <FooterC/>
+     
     </div>
   )
 }

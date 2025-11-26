@@ -31,7 +31,7 @@ function Navbar() {
               className={`px-4 py-2 text-lg rounded-full transition ${
                 current === "/"
                   ? "bg-black text-white font-semibold"
-                  : "text-gray-700 hover:text-black"
+                  : "text-gray-700  hover:text-black hover:font-bold"
               }`}
             >
               Home
@@ -86,7 +86,7 @@ function Navbar() {
               className={`px-4 py-2 text-lg rounded-full transition ${
                 current === "/career"
                   ? "bg-black text-white font-semibold"
-                  : "text-gray-700 hover:text-black"
+                  : "text-gray-700 hover:text-black hover:font-bold"
               }`}
             >
               Career
@@ -97,7 +97,7 @@ function Navbar() {
               className={`px-4 py-2 text-lg rounded-full transition ${
                 current === "/certifications"
                   ? "bg-black text-white font-semibold"
-                  : "text-gray-700 hover:text-black"
+                  : "text-gray-700 hover:text-black hover:font-bold"
               }`}
             >
               Certifications
@@ -108,7 +108,7 @@ function Navbar() {
               className={`px-4 py-2 text-lg rounded-full transition ${
                 current === "/blogs"
                   ? "bg-black text-white font-semibold"
-                  : "text-gray-700 hover:text-black"
+                  : "text-gray-700 hover:text-black hover:font-bold"
               }`}
             >
               Blogs

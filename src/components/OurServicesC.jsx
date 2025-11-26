@@ -14,7 +14,7 @@ const HoverCard = ({ img, title, desc }) => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       className={`
-        relative rounded-xl p-8 min-h-[240px] cursor-pointer 
+        relative rounded-xl p-8 min-h-[200px] cursor-pointer 
         border transition-all duration-500 overflow-hidden
         ${
           hover
@@ -28,7 +28,7 @@ const HoverCard = ({ img, title, desc }) => {
         src={img}
         alt={title}
         className={`w-14 h-14 mx-auto mb-4 transition-all duration-500
-          ${hover ? "opacity-100 -translate-y-3" : "opacity-100 translate-y-0"}
+          ${hover ? "opacity-0 -translate-y-3" : "opacity-100 translate-y-0"}
         `}
       />
 
