@@ -9,7 +9,7 @@ function About() {
   return (
     <>
       <Helmet>
-        <title>Abvout-Us</title>
+        <title>About-Us</title>
       </Helmet>
 
       <div className="w-full overflow-auto mb-[1%]">

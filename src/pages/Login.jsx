@@ -70,13 +70,13 @@ export default function Login() {
             Login
           </button>
         </form>
-
-        <p className="text-center text-sm mt-4">
+{/* 
+        <p  className="text-center text-sm mt-4">
           Don’t have an account?{" "}
-          <span className="text-blue-600 font-semibold cursor-pointer">
+          <span onClick={() => navigate("/register")} className="text-blue-600 font-semibold cursor-pointer">
             Register
           </span>
-        </p>
+        </p> */}
       </div>
     </div>
   );

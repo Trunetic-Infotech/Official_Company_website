@@ -22,6 +22,7 @@ import Navbar from "./components/Navbar";
 import FooterC from "./components/FooterC";
 
 import AdminRoutes from "./Routes/AdminRoutes";
+import Register from "./pages/Register";
 
 export default function AppContent() {
   const location = useLocation();
@@ -50,6 +51,7 @@ export default function AppContent() {
         <Route path="/crm" element={<Crm />} />
         <Route path="/erp" element={<Erp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
 
         {/* Admin Routes */}
         <Route path="/admin/*" element={<AdminRoutes />} />

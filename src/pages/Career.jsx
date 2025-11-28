@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -14,6 +14,8 @@ const cardAnim = {
 };
 
 function Career() {
+
+  const navigate = useNavigate();
   const jobs = [
     "FullStack Developer",
     "Frontend Developer",
@@ -28,6 +30,10 @@ function Career() {
     "Intern - UI/UX",
     "Data Analyst",
   ];
+
+  const applyForJob = (jobName) => {
+    navigate("/careerform", { state: { jobName } });
+  };
 
   return (
     <>
@@ -60,7 +66,9 @@ function Career() {
               focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-lg 
               bg-[#0f1625] text-white placeholder-gray-400"
             />
-            <span className="absolute left-3 top-3 text-gray-400 text-xl">🔍</span>
+            <span className="absolute left-3 top-3 text-gray-400 text-xl">
+              🔍
+            </span>
           </div>
         </motion.div>
 
@@ -91,8 +99,10 @@ function Career() {
                 {title}
               </h1>
 
-              <button className="bg-white px-4 py-2 rounded-lg text-lg font-semibold 
-              hover:bg-gray-200 transition-all duration-200">
+              <button
+                onClick={() => applyForJob(title)}
+                className="bg-white px-4 py-2 rounded-lg text-lg font-semibold hover:bg-gray-200"
+              >
                 Apply Now
               </button>
             </motion.div>

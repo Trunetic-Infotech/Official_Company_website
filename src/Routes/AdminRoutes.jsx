@@ -8,6 +8,7 @@ import HeroEdit from "../admin/pages/HeroEdit";
 import ProjectsManage from "../admin/pages/ProjectsManage";
 import BlogsManage from "../admin/pages/BlogsManage";
 import CertificatesManage from "../admin/pages/CertificatesManage";
+import AddServices from "../Admin/pages/AddServices";
 
 function AdminRoutes() {
   return (
@@ -18,6 +19,7 @@ function AdminRoutes() {
         <Route path="/projects" element={<ProjectsManage />} />
         <Route path="/blogs" element={<BlogsManage />} />
         <Route path="/certificates" element={<CertificatesManage />} />
+          <Route path="/addservices" element={<AddServices/>} />
       </Routes>
     </AdminLayout>
   );
