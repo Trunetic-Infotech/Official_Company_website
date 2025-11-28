@@ -6,7 +6,7 @@ const AboutUsC = () => {
   return (
     <section className="w-full bg-white py-20 px-6">
       <p className="text-2xl text-[#0093FF] font-bold text-center tracking-wide mb-3">
-        ABOUT US
+        About Us
       </p>
 
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
